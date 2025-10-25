@@ -35,6 +35,30 @@
       "description": "Colorful street art and murals found throughout the city's neighborhoods.",
       "imageUrl": "https://images.unsplash.com/photo-1484136199491-6603c473c88b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHJlZXQlMjBhcnR8ZW58MHx8fHwxNzYxMzYyNzQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "street art"
+    },
+    {
+      "id": "team-member-1",
+      "description": "A portrait of a smiling person with a blurred background.",
+      "imageUrl": "https://images.unsplash.com/photo-1542630994-f2d8bed7de65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjEzNzMxMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait person"
+    },
+    {
+      "id": "team-member-2",
+      "description": "A portrait of a person in a professional setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1684919556999-a42d37ffccc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxNDAwMDExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-member-3",
+      "description": "A candid shot of a person working on a laptop.",
+      "imageUrl": "https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjB3b3JraW5nfGVufDB8fHx8MTc2MTM0NjE3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person working"
+    },
+    {
+      "id": "team-member-4",
+      "description": "A headshot of a team member against a neutral background.",
+      "imageUrl": "https://images.unsplash.com/photo-1464890064245-e40511fcf984?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoZWFkc2hvdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE0MTc5NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "headshot person"
     }
   ]
 }
