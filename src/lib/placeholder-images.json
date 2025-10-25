@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "old-port",
+      "description": "A scenic view of the Old Port of Montreal with its historic buildings and the St. Lawrence River.",
+      "imageUrl": "https://images.unsplash.com/photo-1680797166266-0d28c343d8c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb250cmVhbCUyMG9sZCUyMHBvcnR8ZW58MHx8fHwxNzYxNDAxMDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "montreal old port"
+    },
+    {
+      "id": "notre-dame",
+      "description": "The stunning Gothic Revival architecture of the Notre-Dame Basilica.",
+      "imageUrl": "https://images.unsplash.com/photo-1725760899846-7da4ba8991cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb250cmVhbCUyMGJhc2lsaWNhfGVufDB8fHx8MTc2MTQwMTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "montreal basilica"
+    },
+    {
+      "id": "mount-royal",
+      "description": "Panoramic view of the city from the Mount Royal Park lookout.",
+      "imageUrl": "https://images.unsplash.com/photo-1577872134008-2032c595ecc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb250cmVhbCUyMHNreWxpbmV8ZW58MHx8fHwxNzYxNDAxMDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "montreal skyline"
+    },
+    {
+      "id": "poutine",
+      "description": "A classic dish of Quebec poutine with fries, cheese curds, and gravy.",
+      "imageUrl": "https://images.unsplash.com/photo-1578619918896-128ac25d1a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3V0aW5lJTIwZm9vZHxlbnwwfHx8fDE3NjE0MDEwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "poutine food"
+    },
+    {
+      "id": "jean-talon",
+      "description": "Fresh produce and local goods at the bustling Jean-Talon Market.",
+      "imageUrl": "https://images.unsplash.com/photo-1713804714929-105c3b878e4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYXJrZXQlMjBmcnVpdHxlbnwwfHx8fDE3NjE0MDEwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "market fruit"
+    },
+    {
+      "id": "murals",
+      "description": "Colorful street art and murals found throughout the city's neighborhoods.",
+      "imageUrl": "https://images.unsplash.com/photo-1484136199491-6603c473c88b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHJlZXQlMjBhcnR8ZW58MHx8fHwxNzYxMzYyNzQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "street art"
+    }
+  ]
 }
