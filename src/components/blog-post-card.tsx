@@ -3,13 +3,15 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
 
 interface BlogPostCardProps {
   post: {
     title: string;
     slug: string;
-  } & Omit<ImagePlaceholder, 'id'>;
+    description: string;
+    imageUrl: string;
+    imageHint: string;
+  };
 }
 
 export function BlogPostCard({ post }: BlogPostCardProps) {

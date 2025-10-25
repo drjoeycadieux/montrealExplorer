@@ -1,19 +1,15 @@
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { blogPosts } from '@/lib/blog-posts';
 import { BlogPostCard } from '@/components/blog-post-card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
-  const blogPosts = [
-    { title: "A Walker's Guide to Old Montréal", slug: 'old-montreal-guide' },
-    { title: 'The Gothic Beauty of Notre-Dame', slug: 'notre-dame-basilica' },
-    { title: 'City Vistas from Mount Royal Park', slug: 'mount-royal-park' },
-    { title: 'The Ultimate Poutine Experience', slug: 'ultimate-poutine' },
-    { title: 'A Feast for the Senses at Jean-Talon', slug: 'jean-talon-market' },
-    { title: 'Discovering the Murals of The Plateau', slug: 'plateau-murals' },
-  ].map((post, index) => ({
-    ...post,
-    ...PlaceHolderImages[index % PlaceHolderImages.length],
+  const displayPosts = blogPosts.map((post) => ({
+    title: post.title,
+    slug: post.slug,
+    imageUrl: post.image.imageUrl,
+    description: post.image.description,
+    imageHint: post.image.imageHint
   }));
 
   return (
@@ -51,7 +47,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post) => (
+            {displayPosts.map((post) => (
               <BlogPostCard key={post.slug} post={post} />
             ))}
           </div>
