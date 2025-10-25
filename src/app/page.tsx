@@ -1,7 +1,9 @@
+
 import { blogPosts } from '@/lib/blog-posts';
 import { BlogPostCard } from '@/components/blog-post-card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const displayPosts = blogPosts.map((post) => ({
@@ -24,12 +26,16 @@ export default function Home() {
             From cobblestone streets to vibrant festivals, discover the stories, flavors, and secrets of Canada's cultural capital.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Start Exploring
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <Link href="/districts">
+                Start Exploring
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline">
-              Latest Posts
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/">
+                Latest Posts
+              </Link>
             </Button>
           </div>
         </div>
