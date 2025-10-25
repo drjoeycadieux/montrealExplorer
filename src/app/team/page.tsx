@@ -1,29 +1,23 @@
 
-import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Users, Code, Brush, Target } from 'lucide-react';
 
 export default function TeamPage() {
-  const teamMembers = [
+  const teamValues = [
     {
-      name: 'Alex Johnson',
-      role: 'Lead Developer',
-      image: PlaceHolderImages.find(p => p.id === 'team-member-1')!,
+      icon: Code,
+      title: 'Innovation',
+      description: 'We are driven by a passion for technology and are constantly exploring new ways to build amazing user experiences.',
     },
     {
-      name: 'Maria Garcia',
-      role: 'UI/UX Designer',
-      image: PlaceHolderImages.find(p => p.id === 'team-member-2')!,
+      icon: Brush,
+      title: 'Creativity',
+      description: 'Our team thrives on creative energy, designing intuitive and beautiful interfaces that bring our ideas to life.',
     },
     {
-      name: 'Chen Wei',
-      role: 'Backend Engineer',
-      image: PlaceHolderImages.find(p => p.id === 'team-member-3')!,
-    },
-    {
-      name: 'Olivia Smith',
-      role: 'Project Manager',
-      image: PlaceHolderImages.find(p => p.id === 'team-member-4')!,
+      icon: Target,
+      title: 'Mission',
+      description: 'Our goal is to deliver a high-quality, engaging application that showcases the best of Montreal to the world.',
     },
   ];
 
@@ -34,32 +28,23 @@ export default function TeamPage() {
           Meet the Hackerfest Team
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          The passionate individuals behind Montreal Explorer.
+          We are a collective of passionate developers, designers, and thinkers who collaborated during Hackerfest to create Montreal Explorer.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {teamMembers.map((member) => (
-          <Card key={member.name} className="text-center">
-            <div className="relative mx-auto mt-6 h-32 w-32 rounded-full overflow-hidden">
-               <Image
-                src={member.image.imageUrl}
-                alt={`Portrait of ${member.name}`}
-                fill
-                className="object-cover"
-                data-ai-hint={member.image.imageHint}
-              />
-            </div>
-            <CardHeader>
-              <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
-              <CardDescription className="text-primary">{member.role}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground text-sm">
-                Passionate about technology and creating amazing user experiences.
-              </p>
-            </CardContent>
-          </Card>
-        ))}
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {teamValues.map((value) => (
+            <Card key={value.title} className="text-center">
+                <CardHeader>
+                    <div className="flex justify-center mb-4">
+                        <value.icon className="h-12 w-12 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-xl">{value.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-muted-foreground">{value.description}</p>
+                </CardContent>
+            </Card>
+          ))}
       </div>
     </div>
   );
