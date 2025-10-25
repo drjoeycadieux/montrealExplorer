@@ -14,8 +14,8 @@ export function Footer() {
             © {new Date().getFullYear()} Montreal Explorer. All rights reserved.
           </p>
           <nav className="flex items-center space-x-4 text-sm font-medium">
-            <Link href="#" className="text-muted-foreground transition-colors hover:text-foreground">Privacy</Link>
-            <Link href="#" className="text-muted-foreground transition-colors hover:text-foreground">Terms</Link>
+            <Link href="/privacy" className="text-muted-foreground transition-colors hover:text-foreground">Privacy</Link>
+            <Link href="/terms" className="text-muted-foreground transition-colors hover:text-foreground">Terms</Link>
           </nav>
         </div>
       </div>
