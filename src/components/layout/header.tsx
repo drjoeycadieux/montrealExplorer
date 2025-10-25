@@ -12,10 +12,10 @@ export function Header() {
           <span className="font-bold font-headline text-xl">Montreal Explorer</span>
         </Link>
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
-          <Link href="#" className="text-foreground/80 transition-colors hover:text-foreground">Districts</Link>
-          <Link href="#" className="text-foreground/80 transition-colors hover:text-foreground">Cuisine</Link>
-          <Link href="#" className="text-foreground/80 transition-colors hover:text-foreground">Culture</Link>
-          <Link href="#" className="text-foreground/80 transition-colors hover:text-foreground">About</Link>
+          <Link href="/districts" className="text-foreground/80 transition-colors hover:text-foreground">Districts</Link>
+          <Link href="/cuisine" className="text-foreground/80 transition-colors hover:text-foreground">Cuisine</Link>
+          <Link href="/culture" className="text-foreground/80 transition-colors hover:text-foreground">Culture</Link>
+          <Link href="/about" className="text-foreground/80 transition-colors hover:text-foreground">About</Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <div className="relative w-full max-w-xs">
@@ -26,7 +26,9 @@ export function Header() {
               className="pl-9"
             />
           </div>
-          <Button variant="outline" className="hidden sm:inline-flex">Contact</Button>
+          <Button asChild variant="outline" className="hidden sm:inline-flex">
+            <Link href="/contact">Contact</Link>
+          </Button>
         </div>
       </div>
     </header>
