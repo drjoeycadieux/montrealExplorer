@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { Banner } from '@/components/layout/banner';
 
 export const metadata: Metadata = {
   title: 'Montreal Explorer',
@@ -23,6 +24,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         <div className="relative flex min-h-screen flex-col">
+          <Banner />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
