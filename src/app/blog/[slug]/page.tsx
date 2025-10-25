@@ -5,10 +5,11 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import React from 'react';
+import React, { use } from 'react';
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getBlogPostBySlug(params.slug);
+export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
