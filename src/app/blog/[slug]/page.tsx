@@ -8,6 +8,11 @@ import { Button } from '@/components/ui/button';
 import React from 'react';
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+  // Handle case where slug might be for a file like favicon.ico
+  if (!params.slug || params.slug === 'favicon.ico') {
+    notFound();
+  }
+  
   const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {
