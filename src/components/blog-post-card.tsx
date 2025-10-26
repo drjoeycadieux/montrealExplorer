@@ -34,12 +34,6 @@ export function BlogPostCard({ post }: { post: BlogPost }) {
         </p>
       </CardContent>
       <CardFooter>
-        <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary hover:text-accent-foreground">
-          <Link href={`/blog/${post.slug}`}>
-            Read More
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
       </CardFooter>
     </Card>
   );
