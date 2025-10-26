@@ -1,3 +1,4 @@
+
 import { getBlogPosts, type BlogPost } from '@/lib/blog-posts';
 import { BlogPostCard } from '@/components/blog-post-card';
 
@@ -18,7 +19,7 @@ export default async function BlogPage() {
       {posts.length > 0 ? (
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
-            <BlogPostCard key={post._id} post={post} />
+            <BlogPostCard key={post.slug} post={post} />
           ))}
         </div>
       ) : (
