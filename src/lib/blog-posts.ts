@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages, type ImagePlaceholder } from '@/lib/placeholder-images';
 
 export interface BlogPost {
@@ -54,16 +55,14 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
-  try {
-    const res = await fetch(`${API_BASE_URL}/${slug}`);
-    if (!res.ok) {
-      console.error(`Failed to fetch blog post with slug ${slug}:`, res.statusText);
-      return undefined;
-    }
-    const post = await res.json();
-    return adaptPost(post);
-  } catch (error) {
-    console.error(`Error fetching blog post with slug ${slug}:`, error);
+  const res = await fetch(`${API_BASE_URL}/${slug}`);
+  if (!res.ok) {
+    // Throw an error if the post is not found to be handled by the calling component.
+    throw new Error(`Failed to fetch blog post with slug ${slug}: ${res.statusText}`);
+  }
+  const post = await res.json();
+  if (!post) {
     return undefined;
   }
+  return adaptPost(post);
 }
