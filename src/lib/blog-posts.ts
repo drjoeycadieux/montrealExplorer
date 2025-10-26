@@ -41,7 +41,7 @@ function adaptPost(apiPost: any): BlogPost {
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
   try {
-    const res = await fetch(API_BASE_URL);
+    const res = await fetch(API_BASE_URL, { cache: 'no-store' });
     if (!res.ok) {
       console.error('Failed to fetch blog posts:', res.statusText);
       return [];
@@ -55,7 +55,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
-  const res = await fetch(`${API_BASE_URL}/${slug}`);
+  const res = await fetch(`${API_BASE_URL}/${slug}`, { cache: 'no-store' });
   if (!res.ok) {
     // Throw an error if the post is not found to be handled by the calling component.
     throw new Error(`Failed to fetch blog post with slug ${slug}: ${res.statusText}`);
