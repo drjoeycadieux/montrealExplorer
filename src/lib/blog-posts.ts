@@ -1,4 +1,4 @@
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { PlaceHolderImages, type ImagePlaceholder } from '@/lib/placeholder-images';
 
 export interface BlogPost {
   _id: string;
@@ -15,6 +15,13 @@ const API_BASE_URL = 'https://montrealexplorer-api.onrender.com/api/blog';
 // The existing app uses 'body' and 'description'
 // This function adapts the API response to the app's data structure
 function adaptPost(apiPost: any): BlogPost {
+  const defaultImage = PlaceHolderImages.find(img => img.id === 'murals') || PlaceHolderImages[5] || {
+    id: 'default-blog-image',
+    imageUrl: 'https://picsum.photos/seed/montreal-blog/600/400',
+    description: 'A vibrant scene from Montreal.',
+    imageHint: 'montreal street'
+  };
+
   return {
     _id: apiPost._id,
     title: apiPost.title,
@@ -23,7 +30,7 @@ function adaptPost(apiPost: any): BlogPost {
     excerpt: apiPost.excerpt,
     image: {
       id: apiPost.slug,
-      imageUrl: apiPost.imageUrl,
+      imageUrl: apiPost.imageUrl || defaultImage.imageUrl,
       description: apiPost.title,
       imageHint: 'montreal blog'
     },
