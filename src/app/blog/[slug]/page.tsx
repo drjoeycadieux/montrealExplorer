@@ -9,7 +9,7 @@ import React from 'react';
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   // Handle case where slug might be for a file like favicon.ico
-  if (!params.slug || params.slug === 'favicon.ico') {
+  if (!params.slug || params.slug.endsWith('.ico') || params.slug.endsWith('.png') || params.slug.endsWith('.jpg')) {
     notFound();
   }
   
