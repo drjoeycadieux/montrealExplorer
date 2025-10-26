@@ -28,6 +28,7 @@ export function Header() {
           <Link href="/districts" className="text-foreground/80 transition-colors hover:text-foreground">Districts</Link>
           <Link href="/cuisine" className="text-foreground/80 transition-colors hover:text-foreground">Cuisine</Link>
           <Link href="/culture" className="text-foreground/80 transition-colors hover:text-foreground">Culture</Link>
+          <Link href="/blog" className="text-foreground/80 transition-colors hover:text-foreground">Blog</Link>
           <Link href="/security" className="text-foreground/80 transition-colors hover:text-foreground">Security</Link>
           <Link href="/team" className="text-foreground/80 transition-colors hover:text-foreground">Team</Link>
           <Link href="/about" className="text-foreground/80 transition-colors hover:text-foreground">About</Link>
@@ -60,6 +61,7 @@ export function Header() {
                 <Link href="/districts" className="text-foreground/80 transition-colors hover:text-foreground" onClick={closeSheet}>Districts</Link>
                 <Link href="/cuisine" className="text-foreground/80 transition-colors hover:text-foreground" onClick={closeSheet}>Cuisine</Link>
                 <Link href="/culture" className="text-foreground/80 transition-colors hover:text-foreground" onClick={closeSheet}>Culture</Link>
+                <Link href="/blog" className="text-foreground/80 transition-colors hover:text-foreground" onClick={closeSheet}>Blog</Link>
                 <Link href="/security" className="text-foreground/80 transition-colors hover:text-foreground" onClick={closeSheet}>Security</Link>
                 <Link href="/team" className="text-foreground/80 transition-colors hover:text-foreground" onClick={closeSheet}>Team</Link>
                 <Link href="/about" className="text-foreground/80 transition-colors hover:text-foreground" onClick={closeSheet}>About</Link>

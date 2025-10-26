@@ -1,15 +1,14 @@
-'use client';
+
 import { getBlogPostBySlug } from '@/lib/blog-posts';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import React, { use } from 'react';
+import React from 'react';
 
-export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
-  const post = getBlogPostBySlug(slug);
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -19,7 +18,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
     <div className="container py-12 md:py-16">
       <div className="mx-auto max-w-4xl">
         <Button asChild variant="link" className="p-0 h-auto mb-4">
-          <Link href="/">
+          <Link href="/blog">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to all posts
           </Link>
@@ -39,7 +38,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
         </div>
         <div
           className="prose prose-lg dark:prose-invert mt-8 max-w-none text-foreground/80"
-          dangerouslySetInnerHTML={{ __html: post.body }}
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>
     </div>
